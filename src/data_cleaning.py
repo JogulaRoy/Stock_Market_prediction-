@@ -36,7 +36,7 @@ def save_data(data,filename):
 if __name__=="__main__":    
     stock_symbol="NVDA"
     start="2025-12-01"
-    end="2026=03=01"
+    end="2026-03-01"
     raw_data=download_data(stock_symbol,start,end)
     cleaned_data=clean_data(raw_data)
-    save_data(cleaned_data,"data/cleaned_stock_data.csv")
+    save_data(cleaned_data,"../data/cleaned_stock_data.csv")
