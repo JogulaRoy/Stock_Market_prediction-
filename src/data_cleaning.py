@@ -30,11 +30,8 @@ def clean_data(data):
 def save_data(data,filename):
     data.to_csv(filename,index=False)
     print(f"cleaned data is saved to the path {filename}")
-
-
-
 if __name__=="__main__":    
-    stock_symbol="NVDA"
+    stock_symbol="GOOG"
     start="2025-12-01"
     end="2026-03-01"
     raw_data=download_data(stock_symbol,start,end)
