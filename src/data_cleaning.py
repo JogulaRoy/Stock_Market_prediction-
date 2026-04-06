@@ -1,4 +1,4 @@
-import yfinance as yf 
+import yfinance  as yf 
 import pandas as pd 
 
 #yfinance allows you to download stock data from yahoo finance
@@ -31,9 +31,9 @@ def save_data(data,filename):
     data.to_csv(filename,index=False)
     print(f"cleaned data is saved to the path {filename}")
 if __name__=="__main__":    
-    stock_symbol="GOOG"
-    start="2025-12-01"
-    end="2026-03-01"
+    stock_symbol=input("enter the stock symbol like GOOG, AAPL, MSFT: ")
+    start=input("enter the start date in the format YYYY-MM-DD: ")
+    end=input("enter the end date in the format YYYY-MM-DD: ")
     raw_data=download_data(stock_symbol,start,end)
     cleaned_data=clean_data(raw_data)
     save_data(cleaned_data,"../data/cleaned_stock_data.csv")
